@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="spanish">
+<head>
+	<meta charset="utf-8">
+	<title>Alfredo Pasmiño</title>
+	<meta name="description" content="Coding, scientific development, finance, data analysis, visualization, statistics, and machine learning">
+	<meta name="author" content="Alfredo Pasmiño">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://apasmino.github.io/theme/html5.js"></script>
+		<![endif]-->
+	<link href="http://apasmino.github.io/theme/css/ipython.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/simplex/bootstrap.min.css" rel="stylesheet">
+	<link href="http://apasmino.github.io/theme/css/local.css" rel="stylesheet">
+	<link href="http://apasmino.github.io/theme/css/pygments.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="page-header">
+		<h1><a href="http://apasmino.github.io/">Alfredo Pasmiño</a>
+			<br>	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+        
+        
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<a href="http://apasmino.github.io/firstt-post.html">
+		<h2 itemprop="name headline">First Post</h2>
+	</a>
+	<time datetime="2017-05-04T20:00:00+02:00" itemprop="datePublished">jue 04 mayo 2017</time>
+	&nbsp;—&nbsp;
+	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+		<span itemprop="name">Gabriel Rezzonico</span>
+	</span>
+	<div class="summary">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1>Creación modelo predictivo para la tasa de cancelación de clientes <a class="tocSkip"></h1>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Notebook-por-Alfredo-Pasmiño">Notebook por Alfredo Pasmi&#241;o<a class="anchor-link" href="#Notebook-por-Alfredo-Pasmiño">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><div class="toc" style="margin-top: 1em;"><ul class="toc-item" id="toc-level0"><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Problema" data-toc-modified-id="Problema-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Problema</a></span></li><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Librerías" data-toc-modified-id="Librerías-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Librerías</a></span></li><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Entendiendo-nuestro-DataFrame" data-toc-modified-id="Entendiendo-nuestro-DataFrame-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Entendiendo nuestro DataFrame</a></span></li><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Funciones-específicas" data-toc-modified-id="Funciones-específicas-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Funciones específicas</a></span></li><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Análisis-exploratorio" data-toc-modified-id="Análisis-exploratorio-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Análisis exploratorio</a></span></li><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Construyendo-el-modelo-predictivo" data-toc-modified-id="Construyendo-el-modelo-predictivo-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Construyendo el modelo predictivo</a></span></li><li><span><a href="http://localhost:8888/notebooks/Churn_SKC.ipynb#Conclusiones" data-toc-modified-id="Conclusiones-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusiones</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problema">Problema<a class="anchor-link" href="#Problema">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En SKC Maquinarias una de las métricas que se mide es la tasa de retención de clientes para el área de repuestos, pero como valor adicional se desarrolló un modelo predictivo el cual calcula cuál es la probabilidad que un cliente deje de comprar y cuanto se dejará de ganar por este concepto.
+Esto nos servirá además para revertir los ingresos por venta de repuestos que van con tendencia a la baja.</p></div>
+	Category:
+	<span itemprop="articleSection">
+		<a href="http://apasmino.github.io/category/posts.html" rel="category">posts</a>
+	</span>
+	Tags:
+ 
+	<span itemprop="keywords">
+		<a href="http://apasmino.github.io/tag/python-firsts.html" rel="tag">python firsts</a>
+	</span>
+</div>
+<hr>
+        
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<a href="http://apasmino.github.io/first-post.html">
+		<h2 itemprop="name headline">First Post</h2>
+	</a>
+	<time datetime="2017-04-04T20:00:00+02:00" itemprop="datePublished">mar 04 abril 2017</time>
+	&nbsp;—&nbsp;
+	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+		<span itemprop="name">Gabriel Rezzonico</span>
+	</span>
+	<div class="summary">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="First-post!This-will-be-the-first-post-in-our-new-Pelican-blog!-You-can-add-any-code-or-markdown-cells-to-this-Jupyter-notebook,-and-they-will-be-rendered-on-your-blog.">First post!This will be the first post in our new Pelican blog! You can add any code or markdown cells to this Jupyter notebook, and they will be rendered on your blog.<a class="anchor-link" href="#First-post!This-will-be-the-first-post-in-our-new-Pelican-blog!-You-can-add-any-code-or-markdown-cells-to-this-Jupyter-notebook,-and-they-will-be-rendered-on-your-blog.">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input"></div>
+	Category:
+	<span itemprop="articleSection">
+		<a href="http://apasmino.github.io/category/posts.html" rel="category">posts</a>
+	</span>
+	Tags:
+ 
+	<span itemprop="keywords">
+		<a href="http://apasmino.github.io/tag/python-firsts.html" rel="tag">python firsts</a>
+	</span>
+</div>
+<hr>
+        
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<a href="http://apasmino.github.io/mardown-post.html">
+		<h2 itemprop="name headline">Markdown post test</h2>
+	</a>
+	<time datetime="2017-04-04T20:00:00+02:00" itemprop="datePublished">mar 04 abril 2017</time>
+	&nbsp;—&nbsp;
+	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+		<span itemprop="name">Gabriel Rezzonico</span>
+	</span>
+	<div class="summary"><p>This is post is written using markdown.</p></div>
+	Category:
+	<span itemprop="articleSection">
+		<a href="http://apasmino.github.io/category/posts.html" rel="category">posts</a>
+	</span>
+	Tags:
+ 
+	<span itemprop="keywords">
+		<a href="http://apasmino.github.io/tag/python.html" rel="tag">python</a>
+	</span>
+	<span itemprop="keywords">
+		<a href="http://apasmino.github.io/tag/mardown.html" rel="tag">mardown</a>
+	</span>
+	<span itemprop="keywords">
+		<a href="http://apasmino.github.io/tag/firsts.html" rel="tag">firsts</a>
+	</span>
+</div>
+<hr>
+ <div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="http://apasmino.github.io/index.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div> 		</div>
+	</div> 	<!-- <hr> -->
+</div> <!-- /container -->
+<footer class="aw-footer bg-danger">
+	<div class="container"> <!-- footer -->
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-md-3">
+						<h4>Navigation</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="http://apasmino.github.io">Alfredo Pasmiño</a></li>
+							<li><a href="http://apasmino.github.io/feeds/all.atom.xml" type="application/atom+xml"><i class="fa fa-rss "></i> atom</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Author</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="#">You can add links in your config file</a></li>
+							<li><a href="#">Another social link</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Categories</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="http://apasmino.github.io/category/posts.html">posts (3)</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Links</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="http://getpelican.com/">Pelican</a></li>
+							<li><a href="http://python.org/">Python.org</a></li>
+							<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+							<li><a href="#">You can modify those links in your config file</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center center-block aw-bottom">
+			<p>&copy; Alfredo Pasmiño 2016</p>
+			<p>Powered by Pelican</p>
+		</div>
+	</div>
+</div>
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$("div.collapseheader").click(function () {
+		$header = $(this).children("span").first();
+		$codearea = $(this).children(".input_area");
+		$codearea.slideToggle(500, function () {
+			$header.text(function () {
+				return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+			});
+		});
+	});
+});
+</script>
+</body>
+</html>
