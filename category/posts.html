@@ -1,108 +1,291 @@
 <!DOCTYPE html>
 <html lang="spanish">
-<head>
-	<meta charset="utf-8">
-	<title>posts — Alfredo Pasmiño</title>
-	<meta name="description" content="All posts which refer to category posts">
-	<meta name="author" content="Alfredo Pasmiño">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-		<script src="/theme/html5.js"></script>
-		<![endif]-->
-	<link href="/theme/css/ipython.css" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/simplex/bootstrap.min.css" rel="stylesheet">
-	<link href="/theme/css/local.css" rel="stylesheet">
-	<link href="/theme/css/pygments.css" rel="stylesheet">
-</head>
-<body>
-<div class="container">
-	<div class="page-header">
-		<h1><a href="/">Alfredo Pasmiño</a>
-			<br>	</div>
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-<h1>Category <small>posts</small></h1>
-<table class="table">
-    <tbody>
-        <tr>
-        <td>04 feb 2017</td>
-        <td><a href='/churn_SKC.html'>Tasa de cancelación de clientes</a></td>
-        </tr>
-        <tr>
-        <td>12 dic 2016</td>
-        <td><a href='/Clustering_SKC.html'>Clustering</a></td>
-        </tr>
-        <tr>
-        <td>24 ago 2016</td>
-        <td><a href='/clasificacion_bancaria.html'>Clasificación clientes campaña bancaria</a></td>
-        </tr>
-    </tbody>
-</table>
-		</div>
-	</div> 	<!-- <hr> -->
-</div> <!-- /container -->
-<footer class="aw-footer bg-danger">
-	<div class="container"> <!-- footer -->
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<div class="row">
-					<div class="col-md-3">
-						<h4>Navigation</h4>
-						<ul class="list-unstyled my-list-style">
-							<li><a href="">Alfredo Pasmiño</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<h4>Author</h4>
-						<ul class="list-unstyled my-list-style">
-							<li><a href="http://github.com/apasmino">Github</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<h4>Categories</h4>
-						<ul class="list-unstyled my-list-style">
-							<li><a href="/category/posts.html">posts (3)</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<h4>Links</h4>
-						<ul class="list-unstyled my-list-style">
-							<li><a href="http://getpelican.com/">Pelican</a></li>
-							<li><a href="http://python.org/">Python.org</a></li>
-							<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 text-center center-block aw-bottom">
-			<p>&copy; Alfredo Pasmiño 2016</p>
-			<p>Powered by Pelican</p>
-		</div>
-	</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="">
+
+    <!--
+    favicons generated with:
+    <http://realfavicongenerator.net>
+
+    if you want to generate your own favicon, use this custom path:
+    /theme/ico/favicon/
+    -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/theme/ico/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/theme/ico/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/ico/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/theme/ico/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/ico/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/theme/ico/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/theme/ico/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/theme/ico/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/theme/ico/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/theme/ico/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/theme/ico/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/theme/ico/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/theme/ico/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/theme/ico/favicon/manifest.json">
+    <link rel="mask-icon" href="/theme/ico/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/theme/ico/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/theme/ico/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="/theme/ico/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <script src="/theme/js/lib/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="/theme/css/uikit.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="/theme/css/custom.min.css" />
+    <!-- default pygment style is the 'default' style -->
+    <link rel="stylesheet" type="text/css" href="/theme/css/pygment.min.css" />
+    <script src="/theme/js/uikit.min.js"></script>
+    <title>Posts | Alfredo Pasmiño</title>
+
+ 
+  </head>
+  <body>
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <nav class="uk-navbar uk-margin-large-bottom">
+        <a class="uk-navbar-brand uk-hidden-small" href="">Alfredo Pasmiño</a>
+        <ul class="uk-navbar-nav uk-hidden-small">
+      <li class="uk-active"><a href="/category/posts.html">posts</a></li>
+        </ul>
+        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
+        <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Alfredo Pasmiño</div>
+    </nav>
+    <div class="uk-grid" data-uk-grid-margin="">
+        <main class="uk-width-medium-3-4">
+<!--
+<h1 class="heading uk-text-primary">
+    Articles in the category <span class="entity">posts</span>
+</h1>
+-->
+        <h1 class=" uk-article-title">
+            <a href="/churn_SKC.html">Tasa de cancelación de clientes</a>
+        </h1>
+        <p class="uk-article-meta">
+        Published on   <time datetime="2017-02-04">sáb 04 febrero 2017</time>
+        by         <a class="url fn" href="/author/alfredo-pasmino.html">Alfredo Pasmiño</a>
+    posted in <a href="/category/posts.html">posts</a>
+    <br/>
+    <a href="/tag/python.html" class="uk-icon-tag">python</a>
+    <a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a>
+    <a href="/tag/classification.html" class="uk-icon-tag">classification</a>
+    <a href="/tag/supervised-learning.html" class="uk-icon-tag">supervised learning</a>
+
+        </p>
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$("div.collapseheader").click(function () {
-		$header = $(this).children("span").first();
-		$codearea = $(this).children(".input_area");
-		$codearea.slideToggle(500, function () {
-			$header.text(function () {
-				return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
-			});
-		});
-	});
-});
-</script>
-</body>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1>Creación modelo predictivo para la tasa de cancelación de clientes <a class="tocSkip"></h1>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Notebook-por-Alfredo-Pasmiño">Notebook por Alfredo Pasmi&#241;o<a class="anchor-link" href="#Notebook-por-Alfredo-Pasmiño">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><div class="toc" style="margin-top: 1em;"><ul class="toc-item" id="toc-level0"><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Problema" data-toc-modified-id="Problema-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Problema</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Librerías" data-toc-modified-id="Librerías-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Librerías</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Entendiendo-nuestro-DataFrame" data-toc-modified-id="Entendiendo-nuestro-DataFrame-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Entendiendo nuestro DataFrame</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Funciones-específicas" data-toc-modified-id="Funciones-específicas-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Funciones específicas</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Análisis-exploratorio" data-toc-modified-id="Análisis-exploratorio-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Análisis exploratorio</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Construyendo-el-modelo-predictivo" data-toc-modified-id="Construyendo-el-modelo-predictivo-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Construyendo el modelo predictivo</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Conclusiones" data-toc-modified-id="Conclusiones-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusiones</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problema">Problema<a class="anchor-link" href="#Problema">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En SKC Maquinarias una de las métricas que se mide es la tasa de retención de clientes para el área de repuestos, pero como valor adicional se desarrolló un modelo predictivo el cual calcula cuál es la probabilidad que un cliente deje de comprar y cuanto se dejará de ganar por este concepto.
+Esto nos servirá además para revertir los ingresos por venta de repuestos que van con tendencia a la baja.</p>
+        <p>
+        <a class="uk-button uk-button-primary" href="/churn_SKC.html">Continue Reading</a>
+        <!--
+        <a class="uk-button" href="">Comments</a>
+        -->
+        </p>
+        <h1 class=" uk-article-title">
+            <a href="/Clustering_SKC.html">Clustering</a>
+        </h1>
+        <p class="uk-article-meta">
+        Published on   <time datetime="2016-12-12">lun 12 diciembre 2016</time>
+        by         <a class="url fn" href="/author/alfredo-pasmino.html">Alfredo Pasmiño</a>
+    posted in <a href="/category/posts.html">posts</a>
+    <br/>
+    <a href="/tag/python.html" class="uk-icon-tag">python</a>
+    <a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a>
+    <a href="/tag/kmeans.html" class="uk-icon-tag">kmeans</a>
+    <a href="/tag/clustering.html" class="uk-icon-tag">clustering</a>
+    <a href="/tag/unsupervised-learning.html" class="uk-icon-tag">unsupervised learning</a>
+
+        </p>
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Clustering-Clientes">Clustering Clientes<a class="anchor-link" href="#Clustering-Clientes">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h6 id="Notebook-por-Alfredo-Pasmiño">Notebook por Alfredo Pasmi&#241;o<a class="anchor-link" href="#Notebook-por-Alfredo-Pasmiño">&#182;</a></h6>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><div class="toc" style="margin-top: 1em;"><ul class="toc-item" id="toc-level0"><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#Problema" data-toc-modified-id="Problema-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Problema</a></span></li><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#Librerías" data-toc-modified-id="Librerías-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Librerías</a></span></li><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#Análisis-exploratorio" data-toc-modified-id="Análisis-exploratorio-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Análisis exploratorio</a></span></li><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#Elección-número-de-cluster" data-toc-modified-id="Elección-número-de-cluster-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Elección número de cluster</a></span></li><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#K-Means" data-toc-modified-id="K-Means-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>K Means</a></span></li><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#Fuzzy-c-Means" data-toc-modified-id="Fuzzy-c-Means-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Fuzzy c-Means</a></span></li><li><span><a href="http://localhost:8889/notebooks/cluster_SKC.ipynb#Conclusión" data-toc-modified-id="Conclusión-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusión</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Problema">Problema<a class="anchor-link" href="#Problema">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En SKC existe la problematica de como segmentar clientes para establecer una mejor política de asignación de descuentos, promociones especiales, disminuir las diferentes listas de precios por clientes agrupando cuales de ellos son más parecidos, etc. tratando de resolver esta problematica se abordará el problema utilizando dos métodos Kmeans y Fuzzy cmeans, veremos que resultados nos entregan.</p>
+        <p>
+        <a class="uk-button uk-button-primary" href="/Clustering_SKC.html">Continue Reading</a>
+        <!--
+        <a class="uk-button" href="">Comments</a>
+        -->
+        </p>
+        <h1 class=" uk-article-title">
+            <a href="/clasificacion_bancaria.html">Clasificación clientes campaña bancaria</a>
+        </h1>
+        <p class="uk-article-meta">
+        Published on   <time datetime="2016-08-24">mié 24 agosto 2016</time>
+        by         <a class="url fn" href="/author/alfredo-pasmino.html">Alfredo Pasmiño</a>
+    posted in <a href="/category/posts.html">posts</a>
+    <br/>
+    <a href="/tag/python.html" class="uk-icon-tag">python</a>
+    <a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a>
+    <a href="/tag/classification.html" class="uk-icon-tag">classification</a>
+    <a href="/tag/supervised-learning.html" class="uk-icon-tag">supervised learning</a>
+
+        </p>
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Modelo-predictivo-para-clasificar-los-clientes-de-un-banco-Portugues">Modelo predictivo para clasificar los clientes de un banco Portugues<a class="anchor-link" href="#Modelo-predictivo-para-clasificar-los-clientes-de-un-banco-Portugues">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h6 id="Notebook-por-Alfredo-Pasmiño">Notebook por Alfredo Pasmi&#241;o<a class="anchor-link" href="#Notebook-por-Alfredo-Pasmiño">&#182;</a></h6>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Basado en el problema de clasificación de clientes de una campaña de marketing telefónico de un banco portugues, realizaremos un modelo para clasificar correctamente la variable a precir si el cliente acepta o no el producto que se le ofrece.</p>
+        <p>
+        <a class="uk-button uk-button-primary" href="/clasificacion_bancaria.html">Continue Reading</a>
+        <!--
+        <a class="uk-button" href="">Comments</a>
+        -->
+        </p>
+        </main>
+        <aside class="uk-width-medium-1-4">
+
+  <div class="uk-panel uk-panel-box uk-text-center">
+    <a href="/author/Alfredo Pasmiño.html">
+      <img alt="A picture of the author of this content." class="uk-border-circle" src="/theme/img/"/><h3>Alfredo Pasmiño</h3></a>
+      <p>
+      Hi there! My name is , check out more <a href="">about me</a>.
+      </p>
+  </div>
+
+  <div class="uk-panel">
+      <h3 class="uk-panel-title">Social Links</h3>
+      <div class="icons">
+          <a href="http://github.com/apasmino" class="uk-icon-button uk-icon-justify uk-icon-Github"></a>
+      </div>
+  </div>
+
+    <div class="uk-panel">
+    <h3 class="uk-panel-title">Tags</h3>
+    <ul class="uk-list uk-list-line">
+          <li><a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a></li>
+          <li><a href="/tag/supervised-learning.html" class="uk-icon-tag">supervised learning</a></li>
+          <li><a href="/tag/kmeans.html" class="uk-icon-tag">kmeans</a></li>
+          <li><a href="/tag/classification.html" class="uk-icon-tag">classification</a></li>
+          <li><a href="/tag/clustering.html" class="uk-icon-tag">clustering</a></li>
+          <li><a href="/tag/python.html" class="uk-icon-tag">python</a></li>
+          <li><a href="/tag/unsupervised-learning.html" class="uk-icon-tag">unsupervised learning</a></li>
+    </ul>
+    </div>
+
+
+    <div class="uk-panel">
+    <h3 class="uk-panel-title">Links</h3>
+    <ul class="uk-list uk-list-line">
+          <li><a href="http://getpelican.com/" class="uk-icon-external-link">Pelican</a></li>
+          <li><a href="http://python.org/" class="uk-icon-external-link">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" class="uk-icon-external-link">Jinja2</a></li>
+    </ul>
+    </div>
+
+        </aside>
+    </div>
+    <footer class="uk-margin-bottom uk-panel uk-panel-box uk-text-center uk-margin-large-top">
+        Generated by <a href="https://github.com/getpelican/pelican" class="uk-icon-external-link">pelican</a>
+        and styled with <a href="http://getuikit.com" class="uk-icon-external-link">uikit</a>
+        and themed by <a href="http://inktrap.org" class="uk-icon-external-link">inktrap</a>
+        and made with <a class="uk-icon-heart"></a>
+        <br/>
+        <a class="license" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/ico/cc/by-sa/4.0/80x15.png" /></a>This work is licensed under a <a class="license" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 International License</a>
+
+            <br/>
+            <a class="uk-icon-rss-square"></a><a href="/category/posts.xml">Feed</a> for this page
+    </footer>
+</div>
+
+<div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas">
+      <li class="uk-active"><a href="/category/posts.html">posts</a></li>
+        </ul>
+    </div>
+</div>
+  </body>
 </html>

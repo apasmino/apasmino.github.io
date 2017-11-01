@@ -1,0 +1,6 @@
+a.anchor-link {
+    a.anchor-link {      text-decoration: none;
+    visibility: hidden;  }
+    text-decoration: none;
+    visibility: hidden;
+}
