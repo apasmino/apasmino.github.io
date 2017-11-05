@@ -42,7 +42,7 @@
     <!-- default pygment style is the 'default' style -->
     <link rel="stylesheet" type="text/css" href="/theme/css/pygment.min.css" />
     <script src="/theme/js/uikit.min.js"></script>
-    <title>supervised learning | Alfredo Pasmiño</title>
+    <title>R | Alfredo Pasmiño</title>
 
  
   </head>
@@ -60,21 +60,20 @@
         <main class="uk-width-medium-3-4">
 <!--
 <h1 class="heading uk-text-primary">
-    Articles with the tag <span class="entity">supervised learning</span>
+    Articles with the tag <span class="entity">R</span>
 </h1>
 -->
         <h1 class=" uk-article-title">
-            <a href="/churn_SKC.html">Tasa de cancelación de clientes</a>
+            <a href="/market_basket.html">Market basket</a>
         </h1>
         <p class="uk-article-meta">
-        Published on   <time datetime="2017-02-04">sáb 04 febrero 2017</time>
+        Published on   <time datetime="2017-01-04">mié 04 enero 2017</time>
         by         <a class="url fn" href="/author/alfredo-pasmino.html">Alfredo Pasmiño</a>
     posted in <a href="/category/projects.html">Projects</a>
     <br/>
-    <a href="/tag/python.html" class="uk-icon-tag">python</a>
-    <a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a>
-    <a href="/tag/classification.html" class="uk-icon-tag">classification</a>
-    <a href="/tag/supervised-learning.html" class="uk-icon-tag">supervised learning</a>
+    <a href="/tag/r.html" class="uk-icon-tag">R</a>
+    <a href="/tag/market-basket.html" class="uk-icon-tag">market basket</a>
+    <a href="/tag/apriori.html" class="uk-icon-tag">apriori</a>
 
         </p>
         
@@ -82,7 +81,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>Creación modelo predictivo para la tasa de cancelación de clientes <a class="tocSkip"></h1>
+<h2>Market basket análsis <a class="tocSkip"></h2>
 
 </div>
 </div>
@@ -91,58 +90,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Notebook-por-Alfredo-Pasmiño">Notebook por Alfredo Pasmi&#241;o<a class="anchor-link" href="#Notebook-por-Alfredo-Pasmiño">&#182;</a></h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><div class="toc" style="margin-top: 1em;"><ul class="toc-item" id="toc-level0"><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Problema" data-toc-modified-id="Problema-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Problema</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Librerías" data-toc-modified-id="Librerías-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Librerías</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Entendiendo-nuestro-DataFrame" data-toc-modified-id="Entendiendo-nuestro-DataFrame-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Entendiendo nuestro DataFrame</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Funciones-específicas" data-toc-modified-id="Funciones-específicas-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Funciones específicas</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Análisis-exploratorio" data-toc-modified-id="Análisis-exploratorio-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Análisis exploratorio</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Construyendo-el-modelo-predictivo" data-toc-modified-id="Construyendo-el-modelo-predictivo-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Construyendo el modelo predictivo</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Conclusiones" data-toc-modified-id="Conclusiones-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusiones</a></span></li></ul></div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problema">Problema<a class="anchor-link" href="#Problema">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>En SKC Maquinarias una de las métricas que se mide es la tasa de retención de clientes para el área de repuestos, pero como valor adicional se desarrolló un modelo predictivo el cual calcula cuál es la probabilidad que un cliente deje de comprar y cuanto se dejará de ganar por este concepto.
-Esto nos servirá además para revertir los ingresos por venta de repuestos que van con tendencia a la baja.</p>
-        <p>
-        <a class="uk-button uk-button-primary" href="/churn_SKC.html">Continue Reading</a>
-        <!--
-        <a class="uk-button" href="">Comments</a>
-        -->
-        </p>
-        <h1 class=" uk-article-title">
-            <a href="/clasificacion_bancaria.html">Clasificación clientes campaña bancaria</a>
-        </h1>
-        <p class="uk-article-meta">
-        Published on   <time datetime="2016-08-24">mié 24 agosto 2016</time>
-        by         <a class="url fn" href="/author/alfredo-pasmino.html">Alfredo Pasmiño</a>
-    posted in <a href="/category/projects.html">Projects</a>
-    <br/>
-    <a href="/tag/python.html" class="uk-icon-tag">python</a>
-    <a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a>
-    <a href="/tag/classification.html" class="uk-icon-tag">classification</a>
-    <a href="/tag/supervised-learning.html" class="uk-icon-tag">supervised learning</a>
+<h4>Notebook por Alfredo Pasmiño<a class="tocSkip"></h4>
 
-        </p>
-        
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Modelo-predictivo-para-clasificar-los-clientes-de-un-banco-Portugues">Modelo predictivo para clasificar los clientes de un banco Portugues<a class="anchor-link" href="#Modelo-predictivo-para-clasificar-los-clientes-de-un-banco-Portugues">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -150,7 +99,8 @@ Esto nos servirá además para revertir los ingresos por venta de repuestos que 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="Notebook-por-Alfredo-Pasmiño">Notebook por Alfredo Pasmi&#241;o<a class="anchor-link" href="#Notebook-por-Alfredo-Pasmiño">&#182;</a></h6>
+<h2>Secciones <a class="tocSkip"></h2>
+
 </div>
 </div>
 </div>
@@ -158,9 +108,39 @@ Esto nos servirá además para revertir los ingresos por venta de repuestos que 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Basado en el problema de clasificación de clientes de una campaña de marketing telefónico de un banco portugues, realizaremos un modelo para clasificar correctamente la variable a precir si el cliente acepta o no el producto que se le ofrece.</p>
+<p><a href="#problema">1. Problema</a><br>
+<a href="#analisis">2. Análisis exploratorio</a><br>
+<a href="#reglas">3. Reglas de asociación</a><br>
+<a href="#conclusion">4. Conclusión</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="problema"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Problema">Problema<a class="anchor-link" href="#Problema">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El siguiente análisis corresponde a las cotizaciones y facturaciones de repuestos en SKC y como se comportan estas en relación a los ítems que poseen, específicamanete a que grupo de productos estan involucrados y como se comporta cada uno en los dos diferentes escenarios cotizado y facturado. La principal idea es determinar que productos finalmente se dejan fuera al momento de la factura e identificarlos para en un posterior análisis buscar la causa de la razón por la cuál desaparecen de la compra final.
+El análisis se basa principalmente por grupo de productos ya que por artículo considerando el negocio de repuestos no entrega una visión clara ya que muchos repuestos solo se venden una vez para casos particulares a diferencia de los ítems que se venden con frecuencia para mantenciones, las reparaciones son diferentes e involucran items que probablemente se utilicen en solo para esa ocasión.</p>
         <p>
-        <a class="uk-button uk-button-primary" href="/clasificacion_bancaria.html">Continue Reading</a>
+        <a class="uk-button uk-button-primary" href="/market_basket.html">Continue Reading</a>
         <!--
         <a class="uk-button" href="">Comments</a>
         -->
@@ -221,7 +201,7 @@ Esto nos servirá además para revertir los ingresos por venta de repuestos que 
         <a class="license" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/theme/ico/cc/by-sa/4.0/80x15.png" /></a>This work is licensed under a <a class="license" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 International License</a>
 
             <br/>
-            <a class="uk-icon-rss-square"></a><a href="/tag/supervised-learning.xml">Feed</a> for this page
+            <a class="uk-icon-rss-square"></a><a href="/tag/r.xml">Feed</a> for this page
     </footer>
 </div>
 
