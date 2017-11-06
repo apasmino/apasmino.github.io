@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="/theme/css/pygment.min.css" />
     <script src="/theme/js/uikit.min.js"></script>
     <title>Tasa de cancelación de clientes | Alfredo Pasmiño</title>
-   <meta name="tags" content="python, machine learning, classification, supervised learning" />  <meta name="description" content="Creación modelo predictivo para la tasa de cancelación de clientes Notebook por Alfredo Pasmiño¶ Table of Contents¶1  Problema2  Librerías3  Entendiendo..." />  <meta name="category" content="Projects" /> 
+   <meta name="tags" content="python, machine learning, classification, supervised learning" />  <meta name="description" content="Creación modelo predictivo para la tasa de cancelación de clientes Notebook por Alfredo Pasmiño¶ Secciones 1. Problema 2. Librerías 3. Entendiendo nuestro..." />  <meta name="category" content="Projects" /> 
   </head>
   <body>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
@@ -1068,7 +1068,32 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><div class="toc" style="margin-top: 1em;"><ul class="toc-item" id="toc-level0"><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Problema" data-toc-modified-id="Problema-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Problema</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Librerías" data-toc-modified-id="Librerías-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Librerías</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Entendiendo-nuestro-DataFrame" data-toc-modified-id="Entendiendo-nuestro-DataFrame-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Entendiendo nuestro DataFrame</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Funciones-específicas" data-toc-modified-id="Funciones-específicas-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Funciones específicas</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Análisis-exploratorio" data-toc-modified-id="Análisis-exploratorio-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Análisis exploratorio</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Construyendo-el-modelo-predictivo" data-toc-modified-id="Construyendo-el-modelo-predictivo-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Construyendo el modelo predictivo</a></span></li><li><span><a href="http://localhost:8889/notebooks/Churn_SKC.ipynb#Conclusiones" data-toc-modified-id="Conclusiones-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusiones</a></span></li></ul></div>
+<h2>Secciones<a class="tocSkip"></h2>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="#problema">1. Problema</a><br />
+<a href="#librerias">2. Librerías</a><br />
+<a href="#dataframe">3. Entendiendo nuestro dataframe</a><br />
+<a href="#funciones">4. Funciones específicas</a><br />
+<a href="#analisis">5. Análisis exploratorio</a><br />
+<a href="#modelo">6. Construyendo el modelo predictivo</a><br />
+<a href="#conclusion">7. Conclusiones</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a name="problema"></a></p>
+
 </div>
 </div>
 </div>
@@ -1086,6 +1111,15 @@ h6:hover .anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>En SKC Maquinarias una de las métricas que se mide es la tasa de retención de clientes para el área de repuestos, pero como valor adicional se desarrolló un modelo predictivo el cual calcula cuál es la probabilidad que un cliente deje de comprar y cuanto se dejará de ganar por este concepto.
 Esto nos servirá además para revertir los ingresos por venta de repuestos que van con tendencia a la baja.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="librerias"></a></p>
 
 </div>
 </div>
@@ -1126,6 +1160,15 @@ Esto nos servirá además para revertir los ingresos por venta de repuestos que 
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="dataframe"></a></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -2940,6 +2983,15 @@ EZEGYZNHRERERESkQf4/xJs/pUnxvpgAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="funciones"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Funciones-específicas">Funciones espec&#237;ficas<a class="anchor-link" href="#Funciones-específicas">&#182;</a></h1>
 </div>
 </div>
@@ -3587,6 +3639,15 @@ YII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Con este histograma revisamos en que proporción se encuentran mis categorías, se interpreta que tengo aproximaamente un 65% de mis clientes que vuelve a comparar en un período de 6 meses y el restante se encuentra sin compras. con esto válido que no tengo una muestra desbalanceada para seguir con el análisis del modelo.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="analisis"></a></p>
 
 </div>
 </div>
@@ -4575,6 +4636,15 @@ IiIiIicMikREREREROTk/wEYZAPHtN99NwAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>El Boxplot de ingresos por clientes se aprecia al igual que el anterior gráfico los outliers y siguiendo la misma lógica caracterizada por algunos clientes, el scatter plot es otra forma de visualizar la frecuencia y los ingresos quedando de manifiesto como se alejan los puntos que considera que el 50% de estos clientes por concepto de ingreso debe haber aportado 643 USD con una frecuencia de compra de 5 veces en los últimos 6 meses.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="modelo"></a></p>
 
 </div>
 </div>
@@ -8043,6 +8113,15 @@ RERERKQL+z8jW1zL04FG6gAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a name="conclusion"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h1>
 </div>
 </div>
@@ -8113,16 +8192,16 @@ Luego de tener los resultados se almacenan estos en una base de datos para poste
     <div class="uk-panel">
     <h3 class="uk-panel-title">Tags</h3>
     <ul class="uk-list uk-list-line">
-          <li><a href="/tag/unsupervised-learning.html" class="uk-icon-tag">unsupervised learning</a></li>
-          <li><a href="/tag/apriori.html" class="uk-icon-tag">apriori</a></li>
-          <li><a href="/tag/python.html" class="uk-icon-tag">python</a></li>
-          <li><a href="/tag/clustering.html" class="uk-icon-tag">clustering</a></li>
-          <li><a href="/tag/kmeans.html" class="uk-icon-tag">kmeans</a></li>
           <li><a href="/tag/machine-learning.html" class="uk-icon-tag">machine learning</a></li>
-          <li><a href="/tag/r.html" class="uk-icon-tag">R</a></li>
+          <li><a href="/tag/unsupervised-learning.html" class="uk-icon-tag">unsupervised learning</a></li>
+          <li><a href="/tag/clustering.html" class="uk-icon-tag">clustering</a></li>
           <li><a href="/tag/supervised-learning.html" class="uk-icon-tag">supervised learning</a></li>
+          <li><a href="/tag/apriori.html" class="uk-icon-tag">apriori</a></li>
+          <li><a href="/tag/kmeans.html" class="uk-icon-tag">kmeans</a></li>
+          <li><a href="/tag/r.html" class="uk-icon-tag">R</a></li>
           <li><a href="/tag/market-basket.html" class="uk-icon-tag">market basket</a></li>
           <li><a href="/tag/classification.html" class="uk-icon-tag">classification</a></li>
+          <li><a href="/tag/python.html" class="uk-icon-tag">python</a></li>
     </ul>
     </div>
 
